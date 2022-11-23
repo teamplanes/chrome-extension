@@ -5069,6 +5069,11 @@ popmotion@11.0.3:
     style-value-types "5.0.0"
     tslib "^2.1.0"
 
+pos@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/pos/-/pos-0.4.2.tgz#20e9c77fbeedcc356823cea63c7585cace93be2a"
+  integrity sha512-5HtivCe1HaOqjQZZNhtKrIR1zBvm2FLVVGl4b1poHPZDbXq1BEqYOlmWmetbzqrkRFITxPbEpVgpB03qNS4cSw==
+
 postcss-modules-extract-imports@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0.tgz#cda1f047c0ae80c97dbe28c3e76a43b88025741d"
