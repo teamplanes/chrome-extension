@@ -3,13 +3,23 @@ import logo from '../../assets/img/logo.svg';
 import './Newtab.css';
 import './Newtab.scss';
 import { Text } from '@chakra-ui/react'
+
 const Newtab = () => {
+  const [email, setEmail] = React.useState('');
+  chrome.identity.getProfileUserInfo({ accountStatus: 'ANY' }, function (info) {
+    console.log('ppppp', info)
+    if (info.email) {
+      setEmail(info.email)
+    }
+  });
+
+  const text = `Hello${email ? `, ${email}` : ''}!`;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Text fontSize='20px' color='white'>
-          Edit <code>src/pages/Newtab/Newtab.js</code> and save to reload.
+          Hello{email ? `, ${email}` : ''}!
         </Text>
         <Text fontSize='50px' color='tomato'>
           PLANES
