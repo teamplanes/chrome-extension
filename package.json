@@ -18,9 +18,11 @@
     "@emotion/styled": "^11.10.4",
     "@hot-loader/react-dom": "^17.0.2",
     "framer-motion": "6.2.4",
+    "js-cookie": "^3.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hot-loader": "^4.13.0"
+    "react-hot-loader": "^4.13.0",
+    "react-select": "^5.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
@@ -28,6 +30,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@types/chrome": "^0.0.177",
+    "@types/js-cookie": "^3.0.2",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "babel-eslint": "^10.1.0",

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Takeoff",
-  "description": "A chrome extension that will help you to takeoff from your current tab to a new tab.",
+  "name": "Happy Tabs",
+  "description": "A chrome extension that will turn that frown upside down! :)",
   "options_page": "options.html",
   "background": {
     "service_worker": "background.bundle.js"
@@ -16,6 +16,10 @@
   "icons": {
     "128": "icon-128.png"
   },
+  "permissions": [
+    "identity",
+    "identity.email"
+  ],
   "content_scripts": [
     {
       "matches": [
