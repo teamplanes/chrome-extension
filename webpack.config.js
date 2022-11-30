@@ -4,13 +4,14 @@ var webpack = require('webpack'),
   env = require('./utils/env'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
-  TerserPlugin = require('terser-webpack-plugin');
+  TerserPlugin = require('terser-webpack-plugin'),
+  Dotenv = require('dotenv-webpack');
 var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 var alias = {
-  'react-dom': '@hot-loader/react-dom',
+  'react-dom': 'react-dom',
 };
 
 // load the secrets
@@ -56,6 +57,13 @@ var options = {
   module: {
     rules: [
       {
+        test: /\.(js)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
         // look for .css or .scss files
         test: /\.(css|scss)$/,
         // in the `src` directory
@@ -83,27 +91,15 @@ var options = {
         exclude: /node_modules/,
       },
       { test: /\.(ts|tsx)$/, loader: 'ts-loader', exclude: /node_modules/ },
-      {
-        test: /\.(js|jsx)$/,
-        use: [
-          {
-            loader: 'source-map-loader',
-          },
-          {
-            loader: 'babel-loader',
-          },
-        ],
-        exclude: /node_modules/,
-      },
     ],
   },
   resolve: {
-    alias: alias,
     extensions: fileExtensions
       .map((extension) => '.' + extension)
       .concat(['.js', '.jsx', '.ts', '.tsx', '.css']),
   },
   plugins: [
+    new Dotenv(),
     new CleanWebpackPlugin({ verbose: false }),
     new webpack.ProgressPlugin(),
     // expose and write the allowed env vars on the compiled bundle
