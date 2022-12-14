@@ -1,11 +1,11 @@
 {
-  "name": "planes-in-the-sky",
+  "name": "planes-dashboard",
   "version": "4.3.5",
-  "description": "A chrome extension boilerplate built with React 17, Webpack 5, and Webpack Dev Server 4",
+  "description": "A Dashboard for all things planes",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lxieyang/chrome-extension-boilerplate-react.git"
+    "url": "https://github.com/teamplanes/planes-dashboard.git"
   },
   "scripts": {
     "build": "node utils/build.js",
@@ -13,14 +13,14 @@
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
-    "@chakra-ui/react": "1.8.9",
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@hot-loader/react-dom": "^17.0.2",
-    "framer-motion": "6.2.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hot-loader": "^4.13.0"
+    "@chakra-ui/icons": "^2.0.13",
+    "@chakra-ui/react": "^2.4.2",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "framer-motion": "^7.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
@@ -35,7 +35,8 @@
     "babel-preset-react-app": "^10.0.1yarn star",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^7.0.0",
-    "css-loader": "^6.6.0",
+    "css-loader": "^6.7.2",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.8.0",
     "eslint-config-react-app": "^7.0.0",
     "eslint-plugin-flowtype": "^8.0.3",
@@ -53,8 +54,8 @@
     "terser-webpack-plugin": "^5.3.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
-    "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
   }
 }
